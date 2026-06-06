@@ -22,16 +22,16 @@ una solución estructurada, modular y reutilizable.
 
 Estructura general del Proyecto:
 
-📁 src/
-├── app/
-|    └── Main
-├── model/
-|    └── Direccion
-|    └── Guia
-|    └── Persona
-└── .gitignore
+- 📁 src/
+- ├── app/
+- |    └── Main
+- ├── model/
+- |    └── Direccion
+- |    └── Guia
+- |    └── Persona
+- └── .gitignore
 
 ---------------------------
 
-Repositorio GitHub: https://github.com/GhostieSpoomy17/Sistema_LlanquihueTour_Sumativa1_Semana3
-Fecha de entrega: 08/06/2026
+- Repositorio GitHub: https://github.com/GhostieSpoomy17/Sistema_LlanquihueTour_Sumativa1_Semana3
+- Fecha de entrega: 08/06/2026
