@@ -1,6 +1,6 @@
 package model;
 
-public class Guia extends Persona {
+public class Guia extends Persona implements Registrable {
     private String especialidad;
     private String idioma;
     private int mesesExperiencia;
@@ -60,6 +60,16 @@ public class Guia extends Persona {
 
     public boolean esExperimentado() {
         return mesesExperiencia >= 12;
+    }
+
+    @Override
+    public void mostrarResumen() {
+        System.out.println("=== GUÍA TURÍSTICO ===");
+        System.out.println("Nombre: " + getNombre() + " " + getApellido());
+        System.out.println("RUT: " + getRut());
+        System.out.println("Especialidad: " + especialidad);
+        System.out.println("Idioma: " + idioma);
+        System.out.println("Experiencia: " + mesesExperiencia + " meses");
     }
 
     @Override
