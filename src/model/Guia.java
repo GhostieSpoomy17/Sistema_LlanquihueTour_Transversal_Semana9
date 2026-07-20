@@ -15,41 +15,26 @@ public class Guia extends Persona implements Registrable {
 
     public String getEspecialidad() { return especialidad; }
     public void setEspecialidad(String especialidad) {
-        try {
-            if (especialidad == null || especialidad.trim().isEmpty()) {
-                throw new IllegalArgumentException("La especialidad no puede estar vacía.");
-            }
-            this.especialidad = especialidad;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.especialidad = "Sin especialidad";
+        if (especialidad == null || especialidad.trim().isEmpty()) {
+            throw new IllegalArgumentException("La especialidad no puede estar vacía.");
         }
+        this.especialidad = especialidad;
     }
 
     public String getIdioma() { return idioma; }
     public void setIdioma(String idioma) {
-        try {
-            if (idioma == null || idioma.trim().isEmpty()) {
-                throw new IllegalArgumentException("El idioma no puede estar vacío.");
-            }
-            this.idioma = idioma;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.idioma = "Sin idioma";
+        if (idioma == null || idioma.trim().isEmpty()) {
+            throw new IllegalArgumentException("El idioma no puede estar vacío.");
         }
+        this.idioma = idioma;
     }
 
     public int getMesesExperiencia() { return mesesExperiencia; }
     public void setMesesExperiencia(int mesesExperiencia) {
-        try {
-            if (mesesExperiencia < 0) {
-                throw new IllegalArgumentException("Los meses de experiencia no pueden ser negativos.");
-            }
-            this.mesesExperiencia = mesesExperiencia;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.mesesExperiencia = 0;
+        if (mesesExperiencia < 0) {
+            throw new IllegalArgumentException("Los meses de experiencia no pueden ser negativos.");
         }
+        this.mesesExperiencia = mesesExperiencia;
     }
 
     public String presentarse() {
