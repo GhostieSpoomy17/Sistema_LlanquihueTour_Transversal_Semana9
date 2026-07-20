@@ -13,16 +13,17 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+
         // Código de Sumativa 1
         // ------------------------------
         Direccion dir1 = new Direccion("C. Manuel Antonio Matta", "Llanquihue", "Los Lagos");
         Direccion dir2 = new Direccion("C. Volcán Casablanca", "Puerto Montt", "Los Lagos");
         Direccion dir3 = new Direccion("C. Los Perales", "Frutillar", "Los Lagos");
 
-        Persona persona1 = new Persona("Juanito", "García", "23.157.214-K", dir1);
-        Persona persona2 = new Persona("Anita", "Muñoz", "25.842.475-5", dir2);
+        Persona persona1 = new Persona("Juanito", "García", "7.654.321-K", dir1);
+        Persona persona2 = new Persona("Anita", "Muñoz", "8.123.456-7", dir2);
 
-        Guia guia1 = new Guia("Carla", "Pérez", "11-446.936-7", dir3,
+        Guia guia1 = new Guia("Carla", "Pérez", "9.876.543-2", dir3,
                 "Rutas gastronómicas", "Español", 18);
 
         System.out.println("\nSUMATIVA 1:");
@@ -49,7 +50,7 @@ public class Main {
         servicio.mostrarTodos();
 
         System.out.println("\n----- BÚSQUEDA POR RUT: 14.252.734-5 -----");
-        Guia encontrado = servicio.buscarPorRut("14.252.734-5");
+        Guia encontrado = servicio.buscarPorRut("11.111.111-1");
         if (encontrado != null) {
             System.out.println("Guía encontrado:");
             System.out.println(encontrado);
