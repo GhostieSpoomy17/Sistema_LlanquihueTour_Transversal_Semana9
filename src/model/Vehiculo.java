@@ -15,54 +15,34 @@ public class Vehiculo implements Registrable {
 
     public String getPatente() { return patente; }
     public void setPatente(String patente) {
-        try {
-            if (patente == null || patente.trim().isEmpty()) {
-                throw new IllegalArgumentException("La patente no puede estar vacía.");
-            }
-            this.patente = patente;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.patente = "Sin patente";
+        if (patente == null || patente.trim().isEmpty()) {
+            throw new IllegalArgumentException("La patente no puede estar vacía.");
         }
+        this.patente = patente;
     }
 
     public String getMarca() { return marca; }
     public void setMarca(String marca) {
-        try {
-            if (marca == null || marca.trim().isEmpty()) {
-                throw new IllegalArgumentException("La marca no puede estar vacía.");
-            }
-            this.marca = marca;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.marca = "Sin marca";
+        if (marca == null || marca.trim().isEmpty()) {
+            throw new IllegalArgumentException("La marca no puede estar vacía.");
         }
+        this.marca = marca;
     }
 
     public String getTipo() { return tipo; }
     public void setTipo(String tipo) {
-        try {
-            if (tipo == null || tipo.trim().isEmpty()) {
-                throw new IllegalArgumentException("El tipo no puede estar vacío.");
-            }
-            this.tipo = tipo;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.tipo = "Sin tipo";
+        if (tipo == null || tipo.trim().isEmpty()) {
+            throw new IllegalArgumentException("El tipo no puede estar vacío.");
         }
+        this.tipo = tipo;
     }
 
     public int getCapacidad() { return capacidad; }
     public void setCapacidad(int capacidad) {
-        try {
-            if (capacidad <= 0) {
-                throw new IllegalArgumentException("La capacidad debe ser mayor a cero.");
-            }
-            this.capacidad = capacidad;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.capacidad = 1;
+        if (capacidad <= 0) {
+            throw new IllegalArgumentException("La capacidad debe ser mayor a cero.");
         }
+        this.capacidad = capacidad;
     }
 
     @Override
